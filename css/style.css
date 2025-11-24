@@ -1,0 +1,76 @@
+:root {
+    --marrom: #2B1A12;
+    --dourado: #D5A253;
+    --areia: #F3E8D7;
+    --vinho: #511E1E;
+}
+body {
+    background: var(--areia);
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+.navbar {
+    background: var(--marrom) !important;
+}
+.navbar-brand {
+    font-weight: bold;
+    color: var(--dourado) !important;
+}
+.nav-link {
+    color: #fff !important;
+    margin-right: 12px;
+    transition: 0.3s;
+}
+.nav-link:hover {
+    color: var(--dourado) !important;
+}
+.header-img {
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.header-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+.header-title {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+    font-family: "Source Serif Pro", serif;
+    font-size: 48px;
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s forwards ease-out;
+}
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s ease;
+}
+.scroll-reveal.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+footer {
+    background: var(--marrom);
+    color: var(--dourado);
+    padding: 20px;
+    text-align: center;
+}
+.card {
+    transition: .3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
